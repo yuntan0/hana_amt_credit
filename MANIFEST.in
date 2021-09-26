@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hana_amt_credit *.css
+recursive-include hana_amt_credit *.csv
+recursive-include hana_amt_credit *.html
+recursive-include hana_amt_credit *.ico
+recursive-include hana_amt_credit *.js
+recursive-include hana_amt_credit *.json
+recursive-include hana_amt_credit *.md
+recursive-include hana_amt_credit *.png
+recursive-include hana_amt_credit *.py
+recursive-include hana_amt_credit *.svg
+recursive-include hana_amt_credit *.txt
+recursive-exclude hana_amt_credit *.pyc
