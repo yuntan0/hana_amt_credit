@@ -1,0 +1,438 @@
+{
+ "actions": [],
+ "autoname": "format:{country_code}-{bzno}",
+ "creation": "2021-09-26 18:38:25.974515",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "country",
+  "country_code",
+  "column_break_2",
+  "bzno",
+  "kedcd",
+  "column_break_4",
+  "cono_pid",
+  "section_break_6",
+  "enp_nm",
+  "enp_nm_trd",
+  "eng_enp_nm",
+  "reper_nm",
+  "estb_dt",
+  "group_nm",
+  "column_break_8",
+  "em_cnt",
+  "enp_sze",
+  "bzc_cd",
+  "bzc_nm",
+  "mtx_bnk_nm",
+  "major_pd",
+  "column_break_16",
+  "zip",
+  "addr1",
+  "addr2",
+  "tel_no",
+  "fax_no",
+  "enp_scd",
+  "credit_information_section",
+  "cr_grd",
+  "grd_cls",
+  "cr_grd_dtl",
+  "column_break_32",
+  "evl_dt",
+  "sttl_base_dt",
+  "kfb_bad_cnt",
+  "column_break_36",
+  "kfb_fin_tx_cnt",
+  "workout_cnt",
+  "dshovd_cnt",
+  "customervendor_section",
+  "customer_nm1",
+  "customer_rt1",
+  "supplier_nm1",
+  "supplier_rt1",
+  "column_break_44",
+  "customer_nm2",
+  "customer_rt2",
+  "supplier_nm2",
+  "supplier_rt2",
+  "column_break_47",
+  "customer_nm3",
+  "customer_rt3",
+  "supplier_nm3",
+  "supplier_rt3",
+  "tax_information_section",
+  "smpcbmantrtcntn",
+  "column_break_58",
+  "trtcntn",
+  "column_break_60",
+  "base_date",
+  "section_break_23",
+  "opnn_enp",
+  "opnn_sales",
+  "opnn_reper"
+ ],
+ "fields": [
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "country.code",
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Country Code",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bzno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BizNo",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "kedcd",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "KED Code"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cono_pid",
+   "fieldtype": "Data",
+   "label": "Cono pid"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "General Information"
+  },
+  {
+   "fieldname": "enp_nm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "enp_nm_trd",
+   "fieldtype": "Data",
+   "label": "Company Trading Name"
+  },
+  {
+   "fieldname": "eng_enp_nm",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company English Namme"
+  },
+  {
+   "fieldname": "reper_nm",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reper Name"
+  },
+  {
+   "fieldname": "estb_dt",
+   "fieldtype": "Date",
+   "label": "Estb Date"
+  },
+  {
+   "fieldname": "group_nm",
+   "fieldtype": "Data",
+   "label": "Group Name"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "em_cnt",
+   "fieldtype": "Int",
+   "label": "Employee Count"
+  },
+  {
+   "fieldname": "enp_sze",
+   "fieldtype": "Data",
+   "label": "Company size"
+  },
+  {
+   "fieldname": "bzc_cd",
+   "fieldtype": "Data",
+   "label": "Bzc Code"
+  },
+  {
+   "fieldname": "bzc_nm",
+   "fieldtype": "Data",
+   "label": "Bzc Name"
+  },
+  {
+   "fieldname": "mtx_bnk_nm",
+   "fieldtype": "Data",
+   "label": "Mtx Bank Name"
+  },
+  {
+   "fieldname": "major_pd",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Major Product"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zip",
+   "fieldtype": "Data",
+   "label": "ZIP"
+  },
+  {
+   "fieldname": "addr1",
+   "fieldtype": "Data",
+   "label": "Address 1"
+  },
+  {
+   "fieldname": "addr2",
+   "fieldtype": "Data",
+   "label": "Address 2"
+  },
+  {
+   "fieldname": "tel_no",
+   "fieldtype": "Data",
+   "label": "Tel No"
+  },
+  {
+   "fieldname": "fax_no",
+   "fieldtype": "Data",
+   "label": "Fax No"
+  },
+  {
+   "fieldname": "enp_scd",
+   "fieldtype": "Data",
+   "label": "Enp Scd"
+  },
+  {
+   "fieldname": "credit_information_section",
+   "fieldtype": "Section Break",
+   "label": "Credit Information"
+  },
+  {
+   "fieldname": "cr_grd",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Credit Grade"
+  },
+  {
+   "fieldname": "grd_cls",
+   "fieldtype": "Data",
+   "label": "Grade Class"
+  },
+  {
+   "fieldname": "cr_grd_dtl",
+   "fieldtype": "Data",
+   "label": "Credit Grade Details"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "evl_dt",
+   "fieldtype": "Date",
+   "label": "Evaluation Date"
+  },
+  {
+   "fieldname": "sttl_base_dt",
+   "fieldtype": "Date",
+   "label": "Settle Base Date"
+  },
+  {
+   "fieldname": "kfb_bad_cnt",
+   "fieldtype": "Data",
+   "label": "Kfb Bad Count"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kfb_fin_tx_cnt",
+   "fieldtype": "Int",
+   "label": "Kfb Fin Tax Count"
+  },
+  {
+   "fieldname": "workout_cnt",
+   "fieldtype": "Int",
+   "label": "Workout Count"
+  },
+  {
+   "fieldname": "dshovd_cnt",
+   "fieldtype": "Int",
+   "label": "Dshovd Count"
+  },
+  {
+   "fieldname": "customervendor_section",
+   "fieldtype": "Section Break",
+   "label": "Customer/Supplier"
+  },
+  {
+   "fieldname": "customer_nm1",
+   "fieldtype": "Data",
+   "label": "Supplier 1"
+  },
+  {
+   "fieldname": "customer_rt1",
+   "fieldtype": "Data",
+   "label": "Ratio Supplier 1"
+  },
+  {
+   "fieldname": "supplier_nm1",
+   "fieldtype": "Data",
+   "label": "Customer 1"
+  },
+  {
+   "fieldname": "supplier_rt1",
+   "fieldtype": "Data",
+   "label": "Ratio Customer 1"
+  },
+  {
+   "fieldname": "column_break_44",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_nm2",
+   "fieldtype": "Data",
+   "label": "Supplier 2"
+  },
+  {
+   "fieldname": "customer_rt2",
+   "fieldtype": "Data",
+   "label": "Ratio Supplier 2"
+  },
+  {
+   "fieldname": "supplier_nm2",
+   "fieldtype": "Data",
+   "label": "Customer 2"
+  },
+  {
+   "fieldname": "supplier_rt2",
+   "fieldtype": "Data",
+   "label": "Ratio Customer 2"
+  },
+  {
+   "fieldname": "column_break_47",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_nm3",
+   "fieldtype": "Data",
+   "label": "Supplier 3"
+  },
+  {
+   "fieldname": "customer_rt3",
+   "fieldtype": "Data",
+   "label": "Ratio Supplier 3"
+  },
+  {
+   "fieldname": "supplier_nm3",
+   "fieldtype": "Data",
+   "label": "Customer 3"
+  },
+  {
+   "fieldname": "supplier_rt3",
+   "fieldtype": "Data",
+   "label": "Ratio Customer 3"
+  },
+  {
+   "fieldname": "tax_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Information"
+  },
+  {
+   "fieldname": "smpcbmantrtcntn",
+   "fieldtype": "Data",
+   "label": "Home Tax Msg"
+  },
+  {
+   "fieldname": "column_break_58",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trtcntn",
+   "fieldtype": "Data",
+   "label": "Taxation Type Msg"
+  },
+  {
+   "fieldname": "column_break_60",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_date",
+   "fieldtype": "Date",
+   "label": "Base Date"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break",
+   "label": "Opinion"
+  },
+  {
+   "fieldname": "opnn_enp",
+   "fieldtype": "Text",
+   "label": "Opinion for Company"
+  },
+  {
+   "fieldname": "opnn_sales",
+   "fieldtype": "Text",
+   "label": "Opinion for Sales"
+  },
+  {
+   "fieldname": "opnn_reper",
+   "fieldtype": "Text",
+   "label": "Opinion for Reper"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-26 18:38:25.974515",
+ "modified_by": "Administrator",
+ "module": "Hana Amt Credit",
+ "name": "Credit Check",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
