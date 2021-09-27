@@ -77,7 +77,7 @@ def get_company_info(**args):
     print(args)
     bzno = args.get('bzno')
     country_code = args.get('country_code')
-    credit_check = frappe.new_doc('Credit Info')
+    credit_check = frappe.new_doc('Credit Check')
     credit_check.bzno = bzno
     credit_check.country_cd = country_code
     secrets_file = os.path.join(os.getcwd(), 'secrets.json')
@@ -206,6 +206,6 @@ def get_company_info(**args):
             print("Exception error")
 
 
-    print(credit_check)
+#    print(credit_check)
     return credit_check
 
