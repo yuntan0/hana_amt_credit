@@ -58,7 +58,7 @@ def get_tax_info(**args):
         rescode = response.getcode()
 
         print(docname)
-        credit_check1 = frappe.new_doc('Credit Check')
+        credit_check1 = frappe.get_doc('Credit Check',docname)
 
 
         if (rescode == 200):
@@ -71,6 +71,7 @@ def get_tax_info(**args):
             credit_check1.smpcbmantrtcntn = smpcbmantrtcntn
             credit_check1.trtcntn = trtcntn
             credit_check1.base_date = yyyymmdd
+            credit_check1.bzno = bizno
             print(smpcbmantrtcntn+"\n"+trtcntn+"\n"+nrgtTxprYn)
 
     return credit_check1
