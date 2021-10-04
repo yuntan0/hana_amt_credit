@@ -95,6 +95,36 @@ frappe.ui.form.on('Credit Check', {
 			})
         }, __("Get Company info")    );
 
+        frm.add_custom_button(__('Credit Chech Batch'),function(){
+            //frappe.msgprint(frm.doc.date);
+            //let bzno = frm.selected_doc.bzno.replaceAll("-","");
+            //let country_code = frm.selected_doc.country_code.toUpperCase();
+            let docname = frm.selected_doc.name;
+            //frappe.msgprint(country_code);
+
+            var me = this;
+
+            frappe.call({
+				method: "hana_amt_credit.hana_amt_credit.doctype.credit_check.api.get_company_info_batch", //dotted path to server method
+				args: {
+					'docname':docname
+				},
+
+				callback: function(r) {
+
+						console.log(r)
+						// code snippet
+						frappe.msgprint({
+							title: __('Credit check created'),
+							message: __('Credit check created'),
+							indicator: 'orange'
+						});
+
+
+					}
+			})
+        }, __("Get Company info")    );
+
         frm.add_custom_button(__('Tax info'),function(){
             //frappe.msgprint(frm.doc.date);
             let bzno = frm.selected_doc.bzno.replaceAll("-","");
@@ -128,12 +158,44 @@ frappe.ui.form.on('Credit Check', {
 						cur_frm.set_value('smpcbmantrtcntn',r.message.smpcbmantrtcntn);
 						cur_frm.set_value('trtcntn',r.message.trtcntn);
 						cur_frm.set_value('base_date',r.message.base_date);
+						cur_frm.set_value('bzno',r.message.bzno);
 
 						return;
 						//cur_frm.set_value('exchange_rate',r.message.exchange_rate);
 						//cur_frm.exchange_rate = r.message.exchange_rate;
 
 						}
+				}
+			})
+        }, __("Get Company info")    );
+
+
+        frm.add_custom_button(__('Tax info Batch'),function(){
+            //frappe.msgprint(frm.doc.date);
+            let bzno = frm.selected_doc.bzno.replaceAll("-","");
+            let country_code = frm.selected_doc.country_code.toUpperCase();
+            let docname = frm.selected_doc.name;
+            //frappe.msgprint(country_code);
+
+            var me = this;
+
+            frappe.call({
+				method: "hana_amt_credit.hana_amt_credit.doctype.credit_check.api.get_tax_info_batch", //dotted path to server method
+				args: {
+					'docname':docname
+				},
+
+				callback: function(r) {
+
+						console.log(r)
+						// code snippet
+						frappe.msgprint({
+							title: __('Tax Info created'),
+							message: __('Tax Info created'),
+							indicator: 'orange'
+						});
+
+
 				}
 			})
         }, __("Get Company info")    );
