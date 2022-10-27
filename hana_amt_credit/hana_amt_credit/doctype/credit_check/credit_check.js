@@ -135,7 +135,7 @@ frappe.ui.form.on('Credit Check', {
             var me = this;
 
             frappe.call({
-				method: "hana_amt_credit.hana_amt_credit.doctype.credit_check.api.get_tax_info", //dotted path to server method
+				method: "hana_amt_credit.hana_amt_credit.doctype.credit_check.api.get_hometax_info", //dotted path to server method
 				args: {
 					'country_code':country_code,
 					'bzno':bzno,
@@ -155,10 +155,12 @@ frappe.ui.form.on('Credit Check', {
 						//	indicator: 'orange'
 						//});
 						//frm.selected_doc.exchange_rate = r.message.exchange_rate;
-						cur_frm.set_value('smpcbmantrtcntn',r.message.smpcbmantrtcntn);
-						cur_frm.set_value('trtcntn',r.message.trtcntn);
-						cur_frm.set_value('base_date',r.message.base_date);
-						cur_frm.set_value('bzno',r.message.bzno);
+
+						cur_frm.set_value('smpcbmantrtcntn',r.message.home_tax_msg);
+						cur_frm.set_value('bzno',r.message.tax_id);
+						cur_frm.set_value('trtcntn',r.message.taxation_type);
+						cur_frm.set_value('base_date',r.message.home_tax_date);
+
 
 						return;
 						//cur_frm.set_value('exchange_rate',r.message.exchange_rate);
