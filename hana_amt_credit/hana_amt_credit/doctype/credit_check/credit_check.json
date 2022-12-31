@@ -20,6 +20,7 @@
   "reper_nm",
   "estb_dt",
   "group_nm",
+  "customer",
   "column_break_8",
   "em_cnt",
   "enp_sze",
@@ -408,11 +409,17 @@
    "fieldname": "opnn_reper",
    "fieldtype": "Text",
    "label": "Opinion for Reper"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-27 11:12:44.957713",
+ "modified": "2022-12-31 18:27:40.105236",
  "modified_by": "Administrator",
  "module": "Hana Amt Credit",
  "name": "Credit Check",
